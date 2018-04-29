@@ -5,5 +5,6 @@
   <ItemGroup>
     <PackageReference Include="System.Data.Common" Version="4.3.0"/>
     <PackageReference Include="System.Data.SqlClient" Version="4.5.0-preview2-26406-04"/>
+    <PackageReference Include="Pomelo.Data.MySql" Version="*" />
   </ItemGroup>
 </Project>
