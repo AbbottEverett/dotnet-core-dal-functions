@@ -3,11 +3,13 @@ using Xunit;
 
 namespace DALFunctions.Tests
 {
-    public class UnitTest1
+    public class DatabaseTypeTests
     {
         [Fact]
-        public void Test1()
+        public void ShouldHavePostgreSQL()
         {
+            var sut = DatabaseType.PostgreSQL;
+            Assert.Equal("PostgreSQL", sut.Name);
 
         }
     }
