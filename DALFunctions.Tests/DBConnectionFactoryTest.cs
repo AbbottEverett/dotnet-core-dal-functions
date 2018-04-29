@@ -38,6 +38,21 @@ namespace DALFunctions.Tests
             TestConnection(sut, connectionString);
         }
 
+        [Fact]
+        public void ShouldGetPostgresSqlConnection()
+        {
+            // Arrange
+            var dbConnectionFactory = new DbConnectionFactory();
+            var dbType = DatabaseType.PostgreSQL;
+            var connectionString = "";
+
+            // Act
+            var sut = dbConnectionFactory.GetConnection(dbType, connectionString);
+
+            // Assert
+            TestConnection(sut, connectionString);
+        }
+
         private void TestConnection(IDbConnection sut, string expectedConnectionString)
         {
             Assert.NotNull(sut);
