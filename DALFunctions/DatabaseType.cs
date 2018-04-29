@@ -5,7 +5,7 @@ namespace DALFunctions
 {
     public sealed class DatabaseType
     {
-                private static readonly IDictionary<string, DatabaseType> DatabaseTypes = new Dictionary<string, DatabaseType>();
+        private static readonly IDictionary<string, DatabaseType> DatabaseTypes = new Dictionary<string, DatabaseType>();
 
         public int Id { get; }
         public string Name { get; }
