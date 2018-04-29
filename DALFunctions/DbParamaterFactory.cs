@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -15,7 +16,10 @@ namespace DALFunctions
         {
             this._DatabaseType = databaseType;
         }
-        
+
+        public DbParameter GetParamater(KeyValuePair<string, object> kvp)
+            => this.GetParamater(kvp.Key, kvp.Value);
+
         public DbParameter GetParamater(string key, object value)
         {
             if (_DatabaseType == DatabaseType.MySQL) 
