@@ -15,13 +15,19 @@ namespace DALFunctions
         {
             this._DatabaseType = databaseType;
         }
+        
         public DbParameter GetParamater(string key, object value)
         {
-            if (_DatabaseType == DatabaseType.MySQL) {
+            if (_DatabaseType == DatabaseType.MySQL) 
+            {
                 return new MySqlParameter(key, value);
-            } else if (_DatabaseType == DatabaseType.SqlServer) {
+            } 
+            else if (_DatabaseType == DatabaseType.SqlServer) 
+            {
                 return new SqlParameter(key, value);
-            } else if (_DatabaseType == DatabaseType.PostgreSQL) {
+            } 
+            else if (_DatabaseType == DatabaseType.PostgreSQL) 
+            {
                 return new NpgsqlParameter(key, value);
             }
             throw new Exception($"Invalid database type of '{_DatabaseType}'");

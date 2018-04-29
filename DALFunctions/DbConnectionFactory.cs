@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using Npgsql;
 using Pomelo.Data.MySql;
 
-
 namespace DALFunctions
 {
     public class DbConnectionFactory

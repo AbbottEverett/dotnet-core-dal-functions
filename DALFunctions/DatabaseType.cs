@@ -22,7 +22,6 @@ namespace DALFunctions
         public static DatabaseType MySQL = new DatabaseType(2, "MySQL");
         public static DatabaseType PostgreSQL = new DatabaseType(3, "PostgreSQL");
 
-
         public static explicit operator DatabaseType(string name) 
         {
             return DatabaseTypes.ContainsKey(name)
